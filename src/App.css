@@ -1,8 +1,19 @@
-button {
-  border: none;
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
-/* Login-Component */
+.content_wrapper {
+  flex: 1;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+/* Login-Page */
 .login_container {
   border: 1px solid black;
   border-radius: 12px;
@@ -36,4 +47,56 @@ button {
   color: transparent;
   width: 300px;
   height: 45px;
+}
+
+/* Footer-components */
+
+.footer_container {
+  width: 100vw;
+  background-color: #001630;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.footer_title {
+  margin-top: 30px;
+}
+
+.footer_info p,
+.footer_sub_info p {
+  margin: 0;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.685);
+}
+
+.footer_nav {
+  border-top: 1px solid white;
+  margin-top: 30px;
+}
+
+.footer_nav_list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin-top: 5px;
+  justify-content: space-between;
+}
+
+.footer_nav_list li::after {
+  content: "|";
+  margin: 0 10px;
+}
+
+.footer_nav_list li:last-child:after {
+  content: none;
+}
+
+.footer_nav_list li {
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.footer_sub_info {
+  margin-bottom: 30px;
 }
