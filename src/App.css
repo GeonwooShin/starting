@@ -100,3 +100,69 @@ button {
 .footer_sub_info {
   margin-bottom: 30px;
 }
+
+/* Header component style */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #d4d4d4;
+  margin-top: 20px;
+  height: 60px;
+  padding: 0 120px;
+}
+
+.header-routes-container {
+  display: flex;
+  width: 480px;
+  margin: auto 0;
+}
+
+.header-routes {
+  width: 120px;
+  text-align: center;
+  color: black;
+}
+
+.header-routes:link {
+  text-decoration: none;
+}
+
+.header-routes:visited {
+  text-decoration: none;
+}
+
+.header-item-container {
+  display: flex;
+  width: 240px;
+  margin: auto 0;
+}
+
+.header-item {
+  width: 120px;
+  text-align: center;
+  color: black;
+}
+
+.header-item:visited {
+  text-decoration: none;
+}
+
+.header-item:link {
+  text-decoration: none;
+}
+
+/* Logo component style */
+.logo {
+  display: block;
+  margin: 50px 0 0 143px;
+  font-size: 42px;
+  color: black;
+}
+
+.logo:link {
+  text-decoration: none;
+}
+
+.logo:visited {
+  text-decoration: none;
+}
