@@ -106,9 +106,9 @@ button {
   display: flex;
   justify-content: space-between;
   border: 1px solid #d4d4d4;
-  margin-top: 20px;
+  margin: auto;
   height: 60px;
-  padding: 0 120px;
+  width: 1200px;
 }
 
 .header-routes-container {
@@ -165,4 +165,11 @@ button {
 
 .logo:visited {
   text-decoration: none;
+}
+
+/* banner */
+
+.swiper-container {
+  width: 100%;
+  height: 200px;
 }
