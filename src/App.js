@@ -8,7 +8,6 @@ import Footer from "./components/Footer";
 import Blinddate from "./pages/Blinddate";
 import Dotogether from "./pages/Dotogether";
 import Restaurant from "./pages/Restaurant";
-import Rentedroom from "./pages/Rendtedroom";
 
 function App() {
   return (
@@ -22,7 +21,6 @@ function App() {
           <Route path="/blinddate" element={<Blinddate />} />
           <Route path="/dotogether" element={<Dotogether />} />
           <Route path="/restaurant" element={<Restaurant />} />
-          <Route path="/rentedroom" element={<Rentedroom />} />
         </Routes>
       </div>
       <Footer />
