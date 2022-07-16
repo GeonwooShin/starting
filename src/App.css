@@ -13,6 +13,16 @@ button {
   cursor: pointer;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
 /* Login-Page */
 .login_container {
   border: 1px solid black;
@@ -102,69 +112,45 @@ button {
 }
 
 /* Header component style */
+
 .header-container {
   display: flex;
   justify-content: space-between;
-  border: 1px solid #d4d4d4;
+  align-items: center;
   margin: auto;
-  height: 60px;
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
 }
 
-.header-routes-container {
+.header-logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.login-btn {
+  margin-right: 20px;
+}
+
+.login-btn,
+.mypage-btn {
+  font-size: 14px;
+  color: grey;
+}
+
+.nav-menu {
   display: flex;
-  width: 480px;
-  margin: auto 0;
+  justify-content: flex-start;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+  max-width: 1200px;
+  height: 50px;
 }
 
-.header-routes {
-  width: 120px;
-  text-align: center;
-  color: black;
-}
-
-.header-routes:link {
-  text-decoration: none;
-}
-
-.header-routes:visited {
-  text-decoration: none;
-}
-
-.header-item-container {
-  display: flex;
-  width: 240px;
-  margin: auto 0;
-}
-
-.header-item {
-  width: 120px;
-  text-align: center;
-  color: black;
-}
-
-.header-item:visited {
-  text-decoration: none;
-}
-
-.header-item:link {
-  text-decoration: none;
-}
-
-/* Logo component style */
-.logo {
-  display: block;
-  margin: 50px 0 0 143px;
-  font-size: 42px;
-  color: black;
-}
-
-.logo:link {
-  text-decoration: none;
-}
-
-.logo:visited {
-  text-decoration: none;
+.menu-item {
+  margin-right: 20px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 /* banner */
