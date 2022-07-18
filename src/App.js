@@ -22,7 +22,7 @@ function App() {
           <Route path="/blinddate" element={<Blinddate />} />
           <Route path="/dotogether" element={<Dotogether />} />
           <Route path="/restaurant" element={<Restaurant />} />
-          <Route path="/restaurant" element={<Rentedroom />} />
+          <Route path="/rentedroom" element={<Rentedroom />} />
         </Routes>
       </div>
       <Footer />
