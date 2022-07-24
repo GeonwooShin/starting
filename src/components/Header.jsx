@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Container } from "@mui/material";
 
 const menuList = [
   { name: "과팅할래?", route: "/blinddate" },
@@ -10,7 +11,7 @@ const menuList = [
 
 const Header = () => {
   return (
-    <div>
+    <Container maxWidth="lg">
       <div className="header-container">
         <div className="header-logo">
           <Link to="/">starting</Link>
@@ -33,7 +34,7 @@ const Header = () => {
           </li>
         ))}
       </nav>
-    </div>
+    </Container>
   );
 };
 
