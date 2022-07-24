@@ -62,7 +62,6 @@ li {
 /* Footer-components */
 
 .footer_container {
-  width: 100vw;
   background-color: #001630;
   color: #fff;
   display: flex;
@@ -168,4 +167,88 @@ li {
   justify-content: center;
   align-items: center;
   margin: auto;
+}
+
+/* ticket */
+
+.ticket_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.ticket_img {
+  background-image: url("../src/images/ticket.svg");
+  width: 340px;
+  height: 160px;
+  margin: auto;
+}
+
+.service_title {
+  display: flex;
+  justify-content: flex-start;
+  padding: 40px 0 0 0;
+}
+
+.title {
+  margin: 0;
+  font-weight: bold;
+  margin-bottom: 0;
+  display: inline-block;
+  position: relative;
+}
+
+.title::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  width: 85%;
+  background-color: black;
+}
+
+.service_subtitle {
+  font-size: 14px;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.ticket_img_container {
+  position: relative;
+  width: 340px;
+}
+
+.ticket_team,
+.ticket_num,
+.ticket_gender {
+  position: absolute;
+  height: 20px;
+  bottom: 22px;
+  text-align: center;
+  color: #dbb17c;
+  font-size: 12px;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ticket_team {
+  width: 80px;
+  left: 25px;
+}
+
+.ticket_num {
+  left: 128px;
+}
+
+.ticket_gender {
+  width: 50px;
+  left: 172px;
 }
