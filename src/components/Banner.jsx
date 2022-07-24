@@ -20,7 +20,7 @@ const Banner = () => {
       className="swiper-container"
     >
       {bannerList.map((banner) => (
-        <SwiperSlide>
+        <SwiperSlide key={banner}>
           <div className="banner-item">{banner}</div>
         </SwiperSlide>
       ))}
