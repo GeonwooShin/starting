@@ -4,15 +4,16 @@ import { Container, Grid } from "@mui/material";
 import { Link } from "react-router-dom";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
+const TicketList = [
+  { teamName: "순대남", num: 2, gender: "male" },
+  { teamName: "하이요", num: 3, gender: "male" },
+  { teamName: "여신모임", num: 2, gender: "female" },
+  { teamName: "재밌는애들모임", num: 4, gender: "male" },
+  { teamName: "여기요", num: 4, gender: "male" },
+  { teamName: "공주팟", num: 4, gender: "female" },
+];
+
 const Ticket = () => {
-  const TicketList = [
-    { teamName: "순대남", num: 2, gender: "male" },
-    { teamName: "하이요", num: 3, gender: "male" },
-    { teamName: "여신모임", num: 2, gender: "female" },
-    { teamName: "재밌는애들모임", num: 4, gender: "male" },
-    { teamName: "여기요", num: 4, gender: "male" },
-    { teamName: "공주팟", num: 4, gender: "female" },
-  ];
   return (
     <Container maxWidth="lg" className="ticket_container">
       <div className="service_title">
