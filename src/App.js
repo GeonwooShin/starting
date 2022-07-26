@@ -9,23 +9,27 @@ import Blinddate from "./pages/Blinddate";
 import Dotogether from "./pages/Dotogether";
 import Restaurant from "./pages/Restaurant";
 import Rentedroom from "./pages/Rentedroom";
+import { ThemeProvider } from "styled-components";
+import theme from "./style/theme";
 
 function App() {
   return (
     <div className="App">
-      <div className="content_wrapper">
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/login/oauth2/code/kakao" element={<OAuth />} />
-          <Route path="/blinddate" element={<Blinddate />} />
-          <Route path="/dotogether" element={<Dotogether />} />
-          <Route path="/restaurant" element={<Restaurant />} />
-          <Route path="/rentedroom" element={<Rentedroom />} />
-        </Routes>
-      </div>
-      <Footer />
+      <ThemeProvider theme={theme}>
+        <div className="content_wrapper">
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/login/oauth2/code/kakao" element={<OAuth />} />
+            <Route path="/blinddate" element={<Blinddate />} />
+            <Route path="/dotogether" element={<Dotogether />} />
+            <Route path="/restaurant" element={<Restaurant />} />
+            <Route path="/rentedroom" element={<Rentedroom />} />
+          </Routes>
+        </div>
+        <Footer />
+      </ThemeProvider>
     </div>
   );
 }
