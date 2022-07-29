@@ -20,7 +20,7 @@ const Ticket = () => {
         <div>
           <Link to="/blinddate">
             <h1 className="title">
-              과팅할래?
+              과팅할래? ✨
               <ArrowForwardIosIcon />
             </h1>
           </Link>
