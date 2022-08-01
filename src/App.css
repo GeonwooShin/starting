@@ -181,9 +181,9 @@ li {
 }
 
 .ticket_img {
-  background-image: url("../src/images/ticket.svg");
-  width: 340px;
-  height: 160px;
+  background-image: url("../src/images/ticket_small.svg");
+  width: 280px;
+  height: 140px;
   margin: auto;
 }
 
@@ -219,11 +219,12 @@ li {
   display: flex;
   justify-content: flex-start;
   padding: 0;
+  margin-bottom: 25px;
 }
 
 .ticket_img_container {
   position: relative;
-  width: 340px;
+  width: 280px;
 }
 
 .ticket_team,
@@ -234,7 +235,7 @@ li {
   bottom: 22px;
   text-align: center;
   color: #dbb17c;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: bold;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -242,26 +243,25 @@ li {
 }
 
 .ticket_team {
-  width: 80px;
-  left: 25px;
+  width: 50px;
+  left: 29px;
 }
 
 .ticket_num {
-  left: 128px;
+  left: 103px;
 }
 
 .ticket_gender {
   width: 50px;
-  left: 172px;
+  left: 137px;
 }
 
 /* Memo */
 
 .memo-img {
-  background-image: url("../src/images/memo.svg");
-  width: 268px;
-  height: 330px;
-  margin: auto;
+  background-image: url("../src/images/memo_small.svg");
+  width: 220px;
+  height: 300px;
 }
 
 .memo-img-container {
@@ -282,7 +282,7 @@ li {
 }
 
 .memo-title {
-  width: 238px;
+  width: 205px;
   top: 50px;
   left: 15px;
   font-size: 14px;
@@ -291,7 +291,7 @@ li {
 }
 
 .memo-text {
-  width: 238px;
+  width: 200px;
   top: 98px;
   left: 15px;
   height: 80px;
