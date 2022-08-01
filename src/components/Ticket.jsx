@@ -11,6 +11,8 @@ const TicketList = [
   { teamName: "재밌는애들모임", num: 4, gender: "male" },
   { teamName: "여기요", num: 4, gender: "male" },
   { teamName: "공주팟", num: 4, gender: "female" },
+  { teamName: "맛있는녀석들", num: 2, gender: "male" },
+  { teamName: "3공주", num: 3, gender: "female" },
 ];
 
 const Ticket = () => {
@@ -29,9 +31,9 @@ const Ticket = () => {
       <div className="service_subtitle">
         <span className="subtitle">새로운 친구를 만나봐!</span>
       </div>
-      <Grid style={{ margin: "0" }} container spacing={3} xs={12}>
+      <Grid style={{ margin: "0" }} container spacing={1} xs={12}>
         {TicketList.map((item) => (
-          <Grid item md={4} xs={12}>
+          <Grid item md={3} xs={12}>
             <TicketItem item={item} key={item.teamName} />
           </Grid>
         ))}
