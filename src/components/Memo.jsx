@@ -60,6 +60,39 @@ const MemoList = [
     location: "신창",
     field: "공모전",
   },
+  {
+    title: "점메추 저메추 받습니다~ 성의있게 부탁드려요!",
+    text: "신창이 거기서 거기긴 한데 맛있는거 부탁드려요",
+    currentNumber: 1,
+    maximumNumber: 3,
+    userName: "윤팍",
+    manner: 36.5,
+    deadline: "2022년08월21일",
+    location: "신창",
+    field: "공모전",
+  },
+  {
+    title: "점메추 저메추 받습니다~ 성의있게 부탁드려요!",
+    text: "신창이 거기서 거기긴 한데 맛있는거 부탁드려요",
+    currentNumber: 1,
+    maximumNumber: 3,
+    userName: "윤팍",
+    manner: 36.5,
+    deadline: "2022년08월21일",
+    location: "신창",
+    field: "공모전",
+  },
+  {
+    title: "점메추 저메추 받습니다~ 성의있게 부탁드려요!",
+    text: "신창이 거기서 거기긴 한데 맛있는거 부탁드려요",
+    currentNumber: 1,
+    maximumNumber: 3,
+    userName: "윤팍",
+    manner: 36.5,
+    deadline: "2022년08월21일",
+    location: "신창",
+    field: "공모전",
+  },
 ];
 
 const Memo = () => {
@@ -78,9 +111,9 @@ const Memo = () => {
       <div className="service_subtitle">
         <span className="subtitle">이 활동은 어때?</span>
       </div>
-      <Grid style={{ margin: "0" }} container spacing={3} xs={12}>
+      <Grid style={{ margin: "0" }} container spacing={1} xs={12}>
         {MemoList.map((item) => (
-          <Grid item md={4} xs={12}>
+          <Grid item md={12 / 5} xs={12}>
             <MemoItem item={item} />
           </Grid>
         ))}
