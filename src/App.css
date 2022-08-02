@@ -349,3 +349,40 @@ li {
   margin-right: 10px;
   font-weight: bold;
 }
+
+/* blinddate */
+
+.ticket-box-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 80px;
+}
+
+.ticket-box__push {
+  text-align: center;
+}
+
+.push-ticket-img {
+  background-image: url("../src/images/push_ticket.svg");
+  width: 250px;
+  height: 213px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.ticket-box__pull {
+  text-align: center;
+}
+
+.pull-ticket-img {
+  background-image: url("../src/images/pull_ticket.svg");
+  width: 250px;
+  height: 213px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.ticket-box-description {
+  font-size: 12px;
+  font-weight: bold;
+}
