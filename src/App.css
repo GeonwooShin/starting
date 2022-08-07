@@ -386,3 +386,28 @@ li {
   font-size: 12px;
   font-weight: bold;
 }
+
+.ticket-service_title {
+  margin: 0;
+  margin-top: 40px;
+  font-weight: bold;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.ticket-service_title::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  width: 2%;
+  background-color: black;
+}
+
+.ticket_title {
+  margin: auto;
+}
