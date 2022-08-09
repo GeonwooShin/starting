@@ -1,6 +1,24 @@
 import React from "react";
 import { Container, Button } from "@mui/material";
 import { Link } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay, Mousewheel } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/mousewheel";
+import TicketItem from "../components/TicketItem";
+
+const TicketList = [
+  { teamName: "순대남", num: 2, gender: "male" },
+  { teamName: "하이요", num: 3, gender: "male" },
+  { teamName: "여신모임", num: 2, gender: "female" },
+  { teamName: "재밌는애들모임", num: 4, gender: "male" },
+  { teamName: "여기요", num: 4, gender: "male" },
+  { teamName: "공주팟", num: 4, gender: "female" },
+  { teamName: "맛있는녀석들", num: 2, gender: "male" },
+  { teamName: "3공주", num: 3, gender: "female" },
+];
 
 const Blinddate = () => {
   return (
@@ -35,6 +53,22 @@ const Blinddate = () => {
       <div className="service_subtitle">
         <span className="subtitle">티켓을 뽑아 만나보세요!</span>
       </div>
+      <Swiper
+        style={{ marginBottom: "100px" }}
+        modules={[Navigation, Pagination, Autoplay]}
+        spaceBetween={10}
+        slidesPerView={4}
+        pagination={{ clickable: true }}
+        autoplay={{ delay: 5000 }}
+        loop={{ loop: true }}
+        className="swiper-container"
+      >
+        {TicketList.map((item) => (
+          <SwiperSlide>
+            <TicketItem item={item} key={item.teamName} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </Container>
   );
 };
