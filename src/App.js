@@ -9,6 +9,9 @@ import Blinddate from "./pages/Blinddate";
 import Dotogether from "./pages/Dotogether";
 import Restaurant from "./pages/Restaurant";
 import Rentedroom from "./pages/Rentedroom";
+import PushTicket from "./pages/PushTicket";
+import PullTicket from "./pages/PullTicket";
+import Mypage from "./pages/Mypage";
 import { ThemeProvider } from "styled-components";
 import theme from "./style/theme";
 
@@ -26,6 +29,9 @@ function App() {
             <Route path="/dotogether" element={<Dotogether />} />
             <Route path="/restaurant" element={<Restaurant />} />
             <Route path="/rentedroom" element={<Rentedroom />} />
+            <Route path="/pushticket" element={<PushTicket />} />
+            <Route path="/pullticket" element={<PullTicket />} />
+            <Route path="/mypage" element={<Mypage />} />
           </Routes>
         </div>
         <Footer />
