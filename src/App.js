@@ -21,7 +21,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/login/oauth2/code/kakao" element={<OAuth />} />
+            <Route path="/oauth2/redirect" element={<OAuth />} />
             <Route path="/blinddate" element={<Blinddate />} />
             <Route path="/dotogether" element={<Dotogether />} />
             <Route path="/restaurant" element={<Restaurant />} />
