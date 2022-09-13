@@ -5,19 +5,19 @@ import React from "react";
 
 const TeamCardProfile = ({ profile }) => {
   return (
-    <div className="profile-items">
+    <div className="teamcard-profile-items">
       <div
-        className="profile-img"
+        className="teamcard-profile-img"
         style={{
           backgroundImage: `url(${profile.profileImage})`,
           width: "30px",
           height: "30px",
         }}
       ></div>
-      <div className="profile-name">
+      <div className="teamcard-profile-name">
         <span>{profile.profileName}</span>
       </div>
-      <div className="profile-manner">
+      <div className="teamcard-profile-manner">
         <span>{profile.profileManner}</span>
       </div>
     </div>
