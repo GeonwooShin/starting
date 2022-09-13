@@ -442,12 +442,22 @@ li {
   height: 360px;
   background-image: url("../src/images/TeamCard.svg");
   cursor: pointer;
+  position: relative;
 }
 .team-card-container-active {
-  width: 274px;
-  height: 354px;
+  width: 280px;
+  height: 360px;
   background-image: url("../src/images/TeamCard.svg");
   cursor: pointer;
+  position: relative;
+}
+.team-card-container-active::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   border: 3px solid #ffd31a;
   border-radius: 10px;
 }
@@ -486,29 +496,29 @@ li {
 .team-gender {
 }
 
-/* TeamCard Profile */
-.profile-container {
+/* TeamCardProfile */
+.teamcard-profile-container {
   font-size: 14px;
   margin-left: 15px;
   width: 250px;
   height: 175px;
   margin-bottom: 15px;
 }
-.profile-items {
+.teamcard-profile-items {
   margin-bottom: 0;
   width: 250px;
   height: 40px;
   display: flex;
   align-items: center;
 }
-.profile-img {
+.teamcard-profile-img {
   margin-right: 8px;
 }
-.profile-name {
+.teamcard-profile-name {
   width: 166px;
   margin-right: 8px;
 }
-.profile-manner {
+.teamcard-profile-manner {
 }
 
 /* New TeamCard */
@@ -522,4 +532,178 @@ li {
   justify-content: center;
   color: #001630;
   cursor: pointer;
+}
+
+/* Mypage */
+.mypage-myfrineds-myteams {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Mypage - Profile */
+.mypage-container {
+  display: flex;
+  margin-top: 50px;
+  background-color: #e2e8ef;
+  border-radius: 10px;
+  align-items: center;
+  height: 280px;
+  margin-bottom: 10px;
+}
+.mypage-profile-container {
+  display: flex;
+  width: 500px;
+  margin-right: 25px;
+}
+.mypage-profile-img {
+  width: 190px;
+  height: 190px;
+  margin: 0 30px;
+}
+.mypage-profile-items {
+  font-size: 14px;
+}
+.mypage-profile-username {
+  font-size: 28px;
+  font-weight: bold;
+}
+.mypage-profile-username-span {
+  font-size: 20px;
+  font-weight: bold;
+}
+.mypage-profile-manner {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 17px;
+}
+.mypage-profile-gender {
+  margin-bottom: 17px;
+  position: relative;
+}
+.mypage-profile-gender::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  top: 28px;
+  left: 0;
+  right: 0;
+  width: 10%;
+  background-color: #d4d4d4;
+}
+.mypage-profile-university {
+}
+.mypage-profile-department {
+}
+.mypage-profile-student-id {
+}
+.mypage-recent-post-container {
+  border-left: 1px solid #d4d4d4;
+}
+
+/* Mypage - RecentPost */
+.recent-post-container {
+  width: 500px;
+}
+.recent-post-subject {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.recent-post-info {
+  width: 500px;
+  border-top: 1px solid #d4d4d4;
+  border-bottom: 1px solid #d4d4d4;
+  padding: 12px 0 0;
+  margin-bottom: 25px;
+}
+.recent-post-items {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.recent-post-category {
+  width: 65px;
+}
+.recent-post-title {
+  width: 230px;
+}
+.recent-post-date {
+  width: 55px;
+}
+.recent-post-state {
+  width: 45px;
+}
+
+/* Mypage - point-coupon */
+.mypage-point-coupon-container {
+  display: flex;
+  justify-content: space-around;
+  width: 500px;
+}
+/* Mypage - point */
+.mypage-point-container {
+  width: 250px;
+  border-right: 1px solid #d4d4d4;
+}
+.mypage-point-title {
+  text-align: center;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+.mypage-point-items {
+  display: flex;
+  justify-content: center;
+}
+.mypage-point-points {
+  text-align: center;
+  width: 60px;
+}
+.mypage-point-unit {
+  font-size: 14px;
+}
+
+/* Mypage - coupon */
+.mypage-coupon-container {
+  width: 250px;
+}
+.mypage-coupon-title {
+  text-align: center;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+.mypage-coupon-items {
+  display: flex;
+  justify-content: center;
+}
+.mypage-coupon-coupons {
+  text-align: center;
+  width: 30px;
+}
+.mypage-coupon-unit {
+  font-size: 14px;
+}
+
+/* Mypage - Myfriends */
+.mypage-myfriends-container {
+  width: 500px;
+  height: 260px;
+  background-color: #e2e8ef;
+  border-radius: 10px;
+  padding: 10px;
+  overflow: auto;
+}
+.mypage-myfriends-title-options {
+  display: flex;
+  justify-content: space-around;
+}
+.mypage-myfriends-title {
+  width: 150px;
+  margin-right: 100px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.mypage-myfriends-friends-container {
+  display: flex;
+  flex-wrap: wrap;
 }
