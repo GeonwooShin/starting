@@ -15,7 +15,7 @@ const TeamCard = ({ item, index, isClicked, checkIndex }) => {
       <div className="team-introduce">
         <span>{item.introduce}</span>
       </div>
-      <div className="profile-container">
+      <div className="teamcard-profile-container">
         {item.profile.map((profile, idx) => (
           <TeamCardProfile profile={profile} key={idx} />
         ))}
