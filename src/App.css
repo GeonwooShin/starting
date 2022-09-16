@@ -62,7 +62,7 @@ li {
 /* Footer-components */
 
 .footer_container {
-  background-color: #001630;
+  background-color: #2b2b2b;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -156,7 +156,7 @@ li {
 
 .swiper-container {
   width: 100%;
-  height: 200px;
+  height: 320px;
 }
 
 .banner-item {
@@ -410,4 +410,300 @@ li {
 
 .ticket_title {
   margin: auto;
+}
+
+/* Push Ticket */
+.slide-team-card {
+  display: flex;
+}
+.push-ticket-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.push-ticket-check-none {
+  display: none;
+}
+.push-ticket-check-checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  margin-right: 8px;
+}
+.push-ticket-btn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+/* TeamCard */
+.team-card-container {
+  width: 280px;
+  height: 360px;
+  background-image: url("../src/images/TeamCard.svg");
+  cursor: pointer;
+  position: relative;
+}
+.team-card-container-active {
+  width: 280px;
+  height: 360px;
+  background-image: url("../src/images/TeamCard.svg");
+  cursor: pointer;
+  position: relative;
+}
+.team-card-container-active::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 3px solid #ffd31a;
+  border-radius: 10px;
+}
+.team-name {
+  text-align: center;
+  padding-top: 30px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.team-introduce {
+  text-align: center;
+  margin-bottom: 17px;
+  font-size: 14px;
+}
+.team-info-firstline-container {
+  margin-left: 35px;
+  margin-right: 35px;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.team-info-secondline-container {
+  margin-left: 35px;
+  margin-right: 35px;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+}
+.university {
+}
+.team-kakaoid {
+}
+.department {
+}
+.team-gender {
+}
+
+/* TeamCardProfile */
+.teamcard-profile-container {
+  font-size: 14px;
+  margin-left: 15px;
+  width: 250px;
+  height: 175px;
+  margin-bottom: 15px;
+}
+.teamcard-profile-items {
+  margin-bottom: 0;
+  width: 250px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.teamcard-profile-img {
+  margin-right: 8px;
+}
+.teamcard-profile-name {
+  width: 166px;
+  margin-right: 8px;
+}
+.teamcard-profile-manner {
+}
+
+/* New TeamCard */
+.new-team-card-container {
+  width: 278px;
+  height: 358px;
+  border: 1px dashed #001630;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #001630;
+  cursor: pointer;
+}
+
+/* Mypage */
+.mypage-myfrineds-myteams {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Mypage - Profile */
+.mypage-container {
+  display: flex;
+  margin-top: 50px;
+  background-color: #e2e8ef;
+  border-radius: 10px;
+  align-items: center;
+  height: 280px;
+  margin-bottom: 10px;
+}
+.mypage-profile-container {
+  display: flex;
+  width: 500px;
+  margin-right: 25px;
+}
+.mypage-profile-img {
+  width: 190px;
+  height: 190px;
+  margin: 0 30px;
+}
+.mypage-profile-items {
+  font-size: 14px;
+}
+.mypage-profile-username {
+  font-size: 28px;
+  font-weight: bold;
+}
+.mypage-profile-username-span {
+  font-size: 20px;
+  font-weight: bold;
+}
+.mypage-profile-manner {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 17px;
+}
+.mypage-profile-gender {
+  margin-bottom: 17px;
+  position: relative;
+}
+.mypage-profile-gender::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  top: 28px;
+  left: 0;
+  right: 0;
+  width: 10%;
+  background-color: #d4d4d4;
+}
+.mypage-profile-university {
+}
+.mypage-profile-department {
+}
+.mypage-profile-student-id {
+}
+.mypage-recent-post-container {
+  border-left: 1px solid #d4d4d4;
+}
+
+/* Mypage - RecentPost */
+.recent-post-container {
+  width: 500px;
+}
+.recent-post-subject {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.recent-post-info {
+  width: 500px;
+  border-top: 1px solid #d4d4d4;
+  border-bottom: 1px solid #d4d4d4;
+  padding: 12px 0 0;
+  margin-bottom: 25px;
+}
+.recent-post-items {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.recent-post-category {
+  width: 65px;
+}
+.recent-post-title {
+  width: 230px;
+}
+.recent-post-date {
+  width: 55px;
+}
+.recent-post-state {
+  width: 45px;
+}
+
+/* Mypage - point-coupon */
+.mypage-point-coupon-container {
+  display: flex;
+  justify-content: space-around;
+  width: 500px;
+}
+/* Mypage - point */
+.mypage-point-container {
+  width: 250px;
+  border-right: 1px solid #d4d4d4;
+}
+.mypage-point-title {
+  text-align: center;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+.mypage-point-items {
+  display: flex;
+  justify-content: center;
+}
+.mypage-point-points {
+  text-align: center;
+  width: 60px;
+}
+.mypage-point-unit {
+  font-size: 14px;
+}
+
+/* Mypage - coupon */
+.mypage-coupon-container {
+  width: 250px;
+}
+.mypage-coupon-title {
+  text-align: center;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+.mypage-coupon-items {
+  display: flex;
+  justify-content: center;
+}
+.mypage-coupon-coupons {
+  text-align: center;
+  width: 30px;
+}
+.mypage-coupon-unit {
+  font-size: 14px;
+}
+
+/* Mypage - Myfriends */
+.mypage-myfriends-container {
+  width: 500px;
+  height: 260px;
+  background-color: #e2e8ef;
+  border-radius: 10px;
+  padding: 10px;
+  overflow: auto;
+}
+.mypage-myfriends-title-options {
+  display: flex;
+  justify-content: space-around;
+}
+.mypage-myfriends-title {
+  width: 150px;
+  margin-right: 100px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.mypage-myfriends-friends-container {
+  display: flex;
+  flex-wrap: wrap;
 }

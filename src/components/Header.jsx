@@ -20,7 +20,7 @@ const Header = () => {
           <Link to="/login" className="login-btn">
             로그인/회원가입
           </Link>
-          <Link to="/" className="mypage-btn">
+          <Link to="/mypage" className="mypage-btn">
             마이페이지
           </Link>
         </div>
