@@ -1,12 +1,10 @@
 import React from "react";
 import { Container, Button } from "@mui/material";
-import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay, Mousewheel } from "swiper";
+import { Navigation, Pagination, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/mousewheel";
 import TicketItem from "../components/TicketItem";
 
 const TicketList = [
