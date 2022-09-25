@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Container } from "@mui/material";
+import { useSelector } from "react-redux";
 
 const menuList = [
   { name: "과팅할래?", route: "/blinddate" },
@@ -10,6 +11,7 @@ const menuList = [
 ];
 
 const Header = () => {
+  const loginState = useSelector((state) => state.userSlice.loginState);
   return (
     <Container maxWidth="lg">
       <div className="header-container">
@@ -17,9 +19,13 @@ const Header = () => {
           <Link to="/">starting</Link>
         </div>
         <div className="header-user-container">
-          <Link to="/login" className="login-btn">
-            로그인/회원가입
-          </Link>
+          {loginState ? (
+            <span>환영합니다</span>
+          ) : (
+            <Link to="/login" className="login-btn">
+              로그인/회원가입
+            </Link>
+          )}
           <Link to="/mypage" className="mypage-btn">
             마이페이지
           </Link>
