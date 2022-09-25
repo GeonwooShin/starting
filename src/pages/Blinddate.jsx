@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import TicketItem from "../components/TicketItem";
+import { Link } from "react-router-dom";
 
 const TicketList = [
   { teamName: "순대남", num: 2, gender: "male" },
