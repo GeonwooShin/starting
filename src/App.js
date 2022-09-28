@@ -11,7 +11,7 @@ import Restaurant from "./pages/Restaurant";
 import Rentedroom from "./pages/Rentedroom";
 import PushTicket from "./pages/PushTicket";
 import PullTicket from "./pages/PullTicket";
-import Mypage from "./pages/Mypage";
+import RedirectPage from "./pages/RedirectPage";
 import { ThemeProvider } from "styled-components";
 import theme from "./style/theme";
 
@@ -31,7 +31,7 @@ function App() {
             <Route path="/rentedroom" element={<Rentedroom />} />
             <Route path="/pushticket" element={<PushTicket />} />
             <Route path="/pullticket" element={<PullTicket />} />
-            <Route path="/mypage" element={<Mypage />} />
+            <Route path="/mypage" element={<RedirectPage />} />
           </Routes>
         </div>
         <Footer />
