@@ -12,6 +12,7 @@ import Rentedroom from "./pages/Rentedroom";
 import PushTicket from "./pages/PushTicket";
 import PullTicket from "./pages/PullTicket";
 import RedirectPage from "./pages/RedirectPage";
+import SignupForm from "./pages/SignupForm";
 import { ThemeProvider } from "styled-components";
 import theme from "./style/theme";
 
@@ -32,6 +33,7 @@ function App() {
             <Route path="/pushticket" element={<PushTicket />} />
             <Route path="/pullticket" element={<PullTicket />} />
             <Route path="/mypage" element={<RedirectPage />} />
+            <Route path="/signup" element={<SignupForm />} />
           </Routes>
         </div>
         <Footer />
