@@ -16,13 +16,36 @@ const SignupForm = () => {
   const [school, setSchool] = useState("");
   const [department, setDepartment] = useState("");
   const [uniqSchoolNum, setUniqSchoolNum] = useState("");
-  const [validation, setValidation] = useState(true);
+
+  const [isBirth, setIsBirth] = useState(true);
+  const [isPhoneNumber, setIsPhoneNumber] = useState(true);
+  const [isNickname, setisNickname] = useState(true);
 
   const memberId = useSelector((state) => state.userSlice.memberId);
   const accessToken = useSelector((state) => state.userSlice.accessToken);
 
   const debounceNickname = useDebounce(nickname, 500);
 
+  const onChangeBirth = (e) => {
+    const birthRegExp =
+      /^(19\d{2}|20\d{2})-(0[0-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/;
+    if (!birthRegExp.test(e.target.value)) {
+      setIsBirth(false);
+    } else {
+      setIsBirth(true);
+      setBirth(e.target.value);
+    }
+  };
+
+  const onChangePhoneNumber = (e) => {
+    const phoneNumberRegExp = /^01([0|1|6|7|8|9])-\d{3,4}-\d{4}$/;
+    if (!phoneNumberRegExp.test(e.target.value)) {
+      setIsPhoneNumber(false);
+    } else {
+      setIsPhoneNumber(true);
+      setPhoneNumber(e.target.value);
+    }
+  };
   const onChangeNickname = useCallback(
     (e) => {
       setNickname(e.target.value);
@@ -38,14 +61,17 @@ const SignupForm = () => {
         },
       })
       .then((res) => {
-        if (res.data.data === true) setValidation(false);
-        else setValidation(true);
-        console.log(validation);
+        if (res.data.data === true) setisNickname(false);
+        else setisNickname(true);
+        console.log(isNickname);
       })
       .catch((err) => console.log(err.response));
   }, [debounceNickname]);
 
   const onSubmitInfo = (e) => {
+    if (isBirth === false || isPhoneNumber === false || isNickname === false) {
+      return alert("입력 형식을 확인해주세요.");
+    }
     e.preventDefault();
     const data = {
       name: name,
@@ -100,24 +126,30 @@ const SignupForm = () => {
         />
         <TextField
           margin="normal"
+          error={!isBirth}
+          helperText={isBirth ? "" : "1900-01-01 형식으로 입력해주세요."}
           label="생년월일"
           required
           fullWidth
           name="birthOfDate"
-          onChange={(e) => setBirth(e.target.value)}
+          onChange={onChangeBirth}
         />
         <TextField
           margin="normal"
+          error={!isPhoneNumber}
+          helperText={
+            isPhoneNumber ? "" : "010-0000-0000 형식으로 입력해주세요."
+          }
           label="전화 번호"
           required
           fullWidth
           name="phoneNumber"
-          onChange={(e) => setPhoneNumber(e.target.value)}
+          onChange={onChangePhoneNumber}
         />
         <TextField
           margin="normal"
-          error={!validation}
-          helperText={validation ? "" : "이미 사용중인 닉네임입니다."}
+          error={!isNickname}
+          helperText={isNickname ? "" : "이미 사용중인 닉네임입니다."}
           label="닉네임"
           required
           fullWidth
