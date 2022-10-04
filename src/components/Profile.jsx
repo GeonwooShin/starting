@@ -5,21 +5,7 @@ import RecentPost from "../components/RecentPost";
 import Point from "../components/Point";
 import Coupon from "../components/Coupon";
 
-const profileList = {
-  profileImg: profileXL,
-  profileName: "한둘셋넷다여일덟",
-  profileManner: "36.5'C",
-  profileKakaoEmail: "dlagmltkd98@naver.com",
-  profileKakaoID: "dlagmltkd98margin33",
-  profileGender: "MALE",
-  profileUniversity: "순천향대학교",
-  profileDepartment: "디스플레이신소재공",
-  profileStudentID: 17,
-  point: 10000,
-  coupon: 0,
-};
-
-const Profile = () => {
+const Profile = (userInfo) => {
   return (
     <Container>
       <div className="mypage-container">
@@ -27,42 +13,32 @@ const Profile = () => {
           <div
             className="mypage-profile-img"
             style={{
-              backgroundImage: `url(${profileList.profileImg})`,
+              backgroundImage: `url(${userInfo.imageProfileUrl})`,
             }}
           ></div>
           <div className="mypage-profile-items">
             <div className="mypage-profile-username">
-              {profileList.profileName}
+              {userInfo.name}
               <span className="mypage-profile-username-span">님</span>
             </div>
-            <div className="mypage-profile-manner">
-              {profileList.profileManner}
-            </div>
-            <div className="mypage-profile-kakao-email">
-              {profileList.profileKakaoEmail}
-            </div>
-            <div className="mypage-profile-kakao-id">
-              {profileList.profileKakaoID}
-            </div>
-            <div className="mypage-profile-gender">
-              {profileList.profileGender}
-            </div>
-            <div className="mypage-profile-university">
-              {profileList.profileUniversity}
-            </div>
+            <div className="mypage-profile-manner">{userInfo.temperature}</div>
+            <div className="mypage-profile-kakao-email">{userInfo.name}</div>
+            <div className="mypage-profile-kakao-id">{userInfo.name}</div>
+            <div className="mypage-profile-gender">{userInfo.gender}</div>
+            <div className="mypage-profile-university">{userInfo.school}</div>
             <div className="mypage-profile-department">
-              {profileList.profileDepartment}
+              {userInfo.department}
             </div>
             <div className="mypage-profile-student-id">
-              {profileList.profileStudentID}
+              {userInfo.uniqSchoolNumber}
             </div>
           </div>
         </div>
         <div className="mypage-recent-post-container">
           <RecentPost></RecentPost>
           <div className="mypage-point-coupon-container">
-            <Point point={profileList.point}></Point>
-            <Coupon coupon={profileList.coupon}></Coupon>
+            <Point></Point>
+            <Coupon></Coupon>
           </div>
         </div>
       </div>
