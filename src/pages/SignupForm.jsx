@@ -23,13 +23,6 @@ const SignupForm = () => {
 
   const debounceNickname = useDebounce(nickname, 500);
 
-  const onChangeNickname = useCallback(
-    (e) => {
-      setNickname(e.target.value);
-      console.log(nickname);
-    },
-    [nickname]
-  );
   useEffect(() => {
     axios
       .get(`http://13.209.146.204:8080/duplicate/${memberId}/${nickname}`, {
@@ -44,6 +37,14 @@ const SignupForm = () => {
       })
       .catch((err) => console.log(err.response));
   }, [debounceNickname]);
+
+  const onChangeNickname = useCallback(
+    (e) => {
+      setNickname(e.target.value);
+      console.log(nickname);
+    },
+    [nickname]
+  );
 
   const onSubmitInfo = (e) => {
     e.preventDefault();
@@ -104,6 +105,7 @@ const SignupForm = () => {
           required
           fullWidth
           name="birthOfDate"
+          maxLength
           onChange={(e) => setBirth(e.target.value)}
         />
         <TextField
@@ -123,6 +125,7 @@ const SignupForm = () => {
           fullWidth
           name="nickname"
           onChange={onChangeNickname}
+          inputProps={{ maxLength: 10 }}
         />
         <TextField
           margin="normal"
