@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Container } from "@mui/system";
 import Profile from "../components/Profile";
 import MyFriends from "../components/MyFriends";
-import MyTeams from "../components/MyTeams";
 import axios from "axios";
 import { useSelector } from "react-redux";
 
