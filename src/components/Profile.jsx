@@ -5,7 +5,7 @@ import RecentPost from "../components/RecentPost";
 import Point from "../components/Point";
 import Coupon from "../components/Coupon";
 
-const Profile = (userInfo) => {
+const Profile = ({ data }) => {
   return (
     <Container>
       <div className="mypage-container">
@@ -13,24 +13,21 @@ const Profile = (userInfo) => {
           <div
             className="mypage-profile-img"
             style={{
-              backgroundImage: `url(${userInfo.imageProfileUrl})`,
+              backgroundImage: `url(${data.imageProfileUrl})`,
             }}
           ></div>
           <div className="mypage-profile-items">
             <div className="mypage-profile-username">
-              {userInfo.name}
+              {data.name}
               <span className="mypage-profile-username-span">님</span>
             </div>
-            <div className="mypage-profile-manner">{userInfo.temperature}</div>
-            <div className="mypage-profile-kakao-email">{userInfo.name}</div>
-            <div className="mypage-profile-kakao-id">{userInfo.name}</div>
-            <div className="mypage-profile-gender">{userInfo.gender}</div>
-            <div className="mypage-profile-university">{userInfo.school}</div>
-            <div className="mypage-profile-department">
-              {userInfo.department}
-            </div>
+            <div className="mypage-profile-manner">{data.temperature}</div>
+            <div className="mypage-profile-kakao-email">{data.nickname}</div>
+            <div className="mypage-profile-gender">{data.gender}</div>
+            <div className="mypage-profile-university">{data.school}</div>
+            <div className="mypage-profile-department">{data.department}</div>
             <div className="mypage-profile-student-id">
-              {userInfo.uniqSchoolNumber}
+              {data.uniqSchoolNumber}
             </div>
           </div>
         </div>
