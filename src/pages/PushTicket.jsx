@@ -78,7 +78,7 @@ const teamList = [
       {
         profileImage: profileSmall,
         profileName: "secondMember",
-        profileManner: "41.5'C",
+        profileManner: "41.3'C",
       },
     ],
     university: "순천향대학교",
